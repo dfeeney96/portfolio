@@ -12,6 +12,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Nunito:ital,wght@0,200;0,300;0,600;1,200;1,300&display=swap"
         rel="stylesheet">
+
+
 </head>
 
 <body>
@@ -31,48 +33,34 @@
     <main>
         <section id="intro">
             <div class="flex-one">
+                <div id="add-paragraph">
+                    <h2 id="greeting"> Hello. </h2>
+                </div> <!-- end of add-paragraph div for js -->
                 <img src="resources/portrait.jpg" alt="portrait">
-                <h2> Hello, my name is Danielle and I am an aspiring web developer.
-                    <br> <br>
-                    I am currently working on honing my
-                    skills in Javascript, HTML and CSS.
-                </h2>
             </div><!-- end of flex-one div-->
+            <p>Click anywhere on this section</p>
         </section>
 
+        <section id="my-projects">
+            <h3>I have created a range of projects, using various languages and frameworks. Click on a project to learn
+                more:</h3>
+            <ul>
+                <li> Mixed Messages </li>
+                <li> Weather app </li>
+            </ul>
 
-        <section id="certificates">
-            <h3>Certification:</h3>
-            <p> I have attended various courses in order to learn coding skills. Click on a certificate to see more </p>
-            <div class="flex-two">
-                <div class="flex-three" id="gallery">
+            <section id="contact-me">
+                <h3>Interested? Find me on:</h3>
+                <ul>
+                    <li> Mixed Messages </li>
+                    <li> Weather app </li>
+                </ul>
 
 
-                    <img src="resources/certificate-1.png" alt="certificate-one" class="certificate"
-                        id="certificate-one">
 
-                    <img src="resources/certificate-2.jpg" alt="certificate-two" class="certificate"
-                        id="certificate-two">
+            </section>
 
-                    <img src="resources/certificate-3.jpg" alt="certificate-three" class="certificate"
-                        id="certificate-three">
-                </div> <!-- end of flex-three div-->
 
-                <figure>
-                    <img src="resources/certificate-3.jpg" alt="certificate-one" class="main-image"
-                        id="certificate-three">
-                    <figcaption>
-                        <p><strong>Introduction to Coding</strong>
-                            <br>
-                            I decided to learn coding in summer 2020 by enrolling in an introductory course designed to
-                            help
-                            women learn to code.
-                        </p>
-                    </figcaption>
-            </div><!-- end of flex-two div-->
-
-            </figure>
-        </section>
 
 
 
@@ -81,6 +69,40 @@
     <footer>
 
     </footer>
+    <script>
+
+        let textAdded = false;
+
+        function test(event) {
+            if (textAdded === false) {
+                let instruction = document.querySelector("p");
+                instruction.style.display = "none";
+
+                greeting.style.fontSize = "2rem";
+
+                let zone = document.getElementById("add-paragraph");
+
+
+                let para = document.createElement("p");
+                para.innerHTML = "My name is Danielle and I am an aspiring web developer, with skills in HTML, CSS and Javascript.";
+                zone.appendChild(para);
+
+                textAdded = true;
+            }
+        }
+
+
+
+
+        let intro = document.getElementById("intro");
+        intro.onclick = test;
+
+
+
+
+
+
+    </script>
 </body>
 
 </html>
