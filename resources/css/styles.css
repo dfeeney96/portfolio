@@ -12,6 +12,15 @@ section {
     border-bottom: 1.5px solid #0A1D37;
 }
 
+a {
+    color: #0A1D37;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 
 /*Header*/
 header {
@@ -51,6 +60,7 @@ nav a {
 
 nav a:hover {
     color: #eacecf;
+    text-decoration: none;
 }
 
 /*End of Header*/
@@ -131,6 +141,7 @@ nav a:hover {
     background-color: #eacecf;
     border-radius: 10px;
     border: none;
+    font-size: 0.9rem;
     margin: 10px;
     padding: 10px;
     height: 200px;
@@ -144,12 +155,17 @@ nav a:hover {
     list-style: none;
     padding: 0;
     margin: 0;
-
 }
 
-.box li {
-
+.box img{
+    border-radius: 10px;
+    margin: 20px;  
 }
+
+#flex-two{
+    display: flex;
+}
+
 
 /* Footer */
 footer {
@@ -159,6 +175,9 @@ footer {
     padding: 20px;
 }
 
+footer a {
+    color: #F3F0D7;
+}
 
 
 /* For mobile*/
@@ -166,7 +185,7 @@ footer {
 @media only screen and (max-width:850px){
     /*Header*/
     body {
-        font-size: 20px;
+        font-size: 16px;
     }
 
     header{
