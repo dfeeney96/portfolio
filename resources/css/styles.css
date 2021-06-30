@@ -1,7 +1,7 @@
 html, body{
     background-color: #F3F0D7;
     color: #0A1D37;
-    font-size: 16px;
+    font-size: 18px;
     font-family: 'Nunito', sans-serif;
     text-align: center;
     padding: 0px;
@@ -17,7 +17,7 @@ section {
 header {
     background-color: #0A1D37;
     border-bottom: 2px solid black;
-    height: 120px;
+    height: 100px;
     padding-top: 10px;
     text-align: right;
     width: 100%;
@@ -27,7 +27,7 @@ header {
 header h1 {
     color: #F3F0D7;
     font-family: 'Caveat', cursive;
-    margin-right: 50px;
+    margin: 5px 50px 0px 0px;
     text-decoration: underline;
 }
 
@@ -38,6 +38,7 @@ nav ul {
 
 nav li { 
     display: inline-block;
+    font-size: 0.8rem;
     list-style: none;
     margin: 0px 40px 0px 0px;
 }
@@ -68,25 +69,24 @@ nav a:hover {
 }
 
  #intro .flex-one {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
          
     }
 
-    #intro #add-paragraph {
-        padding: 20px;
-        margin: 10px;
-        flex-basis: 40%;
-        flex-shrink: 3;
+#intro #add-paragraph {
+    padding: 10px;
+    margin: 10px;
+    flex-basis: 30%;
+    flex-shrink: 3;
     }
 
 
-
 #intro p {
-   padding-bottom: 5px;
-}
+    padding-bottom: 5px;
+    }
 
 
 #intro img {
@@ -95,13 +95,68 @@ nav a:hover {
     width: 200px;
     margin-top: 30px;
     margin-left: 10px;   
-}
+    }
 
 #intro h2 {
     font-family: 'Caveat', cursive;
     font-size: 10rem;
-    
+    }
+
+/* Grid */
+
+#grid{
+    border: 1 solid black;
+    display: grid;
+    width: 100%;
+    grid-template: 250px / repeat(2, 50%);
+    grid-gap: 1rem;
+    align-items: stretch;
+}
+
+#my-projects{
+    grid-column: 1 / span 1;
+}
+
+#contact-me {
+    display: flex;
+    flex-direction:column;
+    height: 200px;
+    align-items: center;
+    grid-column: 2 / span 1;
    
+}
+
+
+.box {
+    background-color: #eacecf;
+    border-radius: 10px;
+    border: none;
+    margin: 10px;
+    padding: 10px;
+    height: 200px;
+}
+
+.box h3 {
+    font-size: 1.125rem;
+}
+
+.box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+.box li {
+
+}
+
+/* Footer */
+footer {
+    background-color: #0A1D37;
+    color: #F3F0D7;
+    font-size: 0.8rem;
+    padding: 20px;
 }
 
 
@@ -110,6 +165,9 @@ nav a:hover {
 
 @media only screen and (max-width:850px){
     /*Header*/
+    body {
+        font-size: 20px;
+    }
 
     header{
         height: 90px;
@@ -134,13 +192,17 @@ nav a:hover {
 
     /*Main - Intro*/
 
-    #intro {
-        
+    #intro #add-paragraph {
+        flex-basis: 50%;
     }
+
    #intro h2 {
-        font-size: 7em;
+        font-size: 5.5em;
+    }
+
+    #grid {
+        display: block;
     }
 
     
- 
 }

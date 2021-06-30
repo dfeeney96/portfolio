@@ -33,73 +33,79 @@
     <main>
         <section id="intro">
             <div class="flex-one">
-                <div id="add-paragraph">
+                <span id="add-paragraph">
                     <h2 id="greeting"> Hello. </h2>
-                </div> <!-- end of add-paragraph div for js -->
+                </span> <!-- end of add-paragraph div for js -->
                 <img src="resources/portrait.jpg" alt="portrait">
             </div><!-- end of flex-one div-->
             <p>Click anywhere on this section</p>
         </section>
 
-        <section id="my-projects">
-            <h3>I have created a range of projects, using various languages and frameworks. Click on a project to learn
-                more:</h3>
-            <ul>
-                <li> Mixed Messages </li>
-                <li> Weather app </li>
-            </ul>
+        <div id="grid">
+            <div class="overlay">
+                <section id="my-projects" class="box">
+                    <h3>I have created a range of projects, using various languages and frameworks. Click on a project
+                        to
+                        learn
+                        more:</h3>
+                    <ul>
+                        <li> Mixed Messages </li>
+                        <li> Weather app </li>
+                        <li> See More... </li>
+                    </ul>
+                </section>
+            </div> <!-- end of overlay 1-->
 
-            <section id="contact-me">
-                <h3>Interested? Find me on:</h3>
-                <ul>
-                    <li> Mixed Messages </li>
-                    <li> Weather app </li>
-                </ul>
+            <div class="overlay">
+                <section id="contact-me" class="box">
+                    <h3>Interested? Find me on:</h3>
+                    <ul>
+                        <li> Mixed Messages </li>
+                        <li> Weather app </li>
 
-
-
-            </section>
-
-
-
-
-
+                    </ul>
+                </section>
+            </div> <!-- end of overlay 2-->
+        </div> <!-- end of grid-->
     </main>
 
     <footer>
+        <p>Danielle Feeney
+            <br>
+            Personal Portfolio
+            <br>
+            <br>
+            Mobile: 07507455405
+            <br>
+            Email: daniellefeeney96@gmail.com
+        </p>
 
     </footer>
     <script>
 
         let textAdded = false;
 
-        function test(event) {
+        function displayDetail(event) {
             if (textAdded === false) {
                 let instruction = document.querySelector("p");
                 instruction.style.display = "none";
 
                 greeting.style.fontSize = "2rem";
 
+
                 let zone = document.getElementById("add-paragraph");
 
 
                 let para = document.createElement("p");
-                para.innerHTML = "My name is Danielle and I am an aspiring web developer, with skills in HTML, CSS and Javascript.";
+                para.innerHTML = "My name is Danielle and I am an aspiring web developer, with skills in HTML, CSS and Javascript. As I advance through a Web Developer course, I am also looking to practice Python, CSS and Ruby.";
                 zone.appendChild(para);
 
                 textAdded = true;
             }
         }
 
-
-
-
         let intro = document.getElementById("intro");
-        intro.onclick = test;
-
-
-
-
+        intro.onclick = displayDetail;
 
 
     </script>
