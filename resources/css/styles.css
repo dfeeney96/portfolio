@@ -182,7 +182,7 @@ footer a {
 
 /* For mobile*/
 
-@media only screen and (max-width:850px){
+@media only screen and (max-width:750px){
     /*Header*/
     body {
         font-size: 16px;
@@ -219,9 +219,24 @@ footer a {
         font-size: 5.5em;
     }
 
+    .disappear {
+        display: none;
+    }
+
     #grid {
         display: block;
     }
 
     
+}
+
+@media only screen and (max-width:500px){
+
+    nav li { 
+    display: inline-block;
+    font-size: 0.7rem;
+    list-style: none;
+    margin: 0px 20px 0px 0px;
+}
+ 
 }
