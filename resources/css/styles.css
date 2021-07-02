@@ -216,15 +216,12 @@ footer a {
     
     #intro {
         margin-top: 100px;
-        margin-bottom: 0px;
     }
 
 
 
     #intro #add-paragraph {
         flex-basis: 50%;
-        padding-bottom: 0px; 
-        margin-bottom:0px;
     }
 
    #intro h2 {
@@ -247,6 +244,10 @@ footer a {
 }
 
 @media only screen and (max-width:500px){
+
+    #intro {
+        height: 250px;;
+    }
 
     nav li { 
     display: inline-block;
