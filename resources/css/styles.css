@@ -216,12 +216,15 @@ footer a {
     
     #intro {
         margin-top: 100px;
+        margin-bottom: 0px;
     }
 
 
 
     #intro #add-paragraph {
         flex-basis: 50%;
+        padding-bottom: 0px; 
+        margin-bottom:0px;
     }
 
    #intro h2 {
